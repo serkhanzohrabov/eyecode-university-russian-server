@@ -1,0 +1,277 @@
+.page{
+
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+   background: whitesmoke;
+&_header{
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  height: auto;
+  align-items: center;
+  color: black;
+  background-color: aliceblue;
+  
+
+  & h6{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'SF Pro';
+      font-size: 2.7rem;
+    font-family: 'SF Pro';
+  }
+}
+
+&_rewards{
+    color: black;
+     min-width:395px;
+     width:80vw;
+     min-height: 300px;
+     height: auto;
+     margin: 0 auto;
+     margin-top: 100px;
+     padding-bottom: 50px;
+     h2{
+        font-size: 1.5rem;
+        font-family: 'Akony';
+            height: 100px;
+     }
+
+
+     table{
+       border-collapse: collapse;
+       width: 100%;
+      thead{
+        
+        font-family: 'SF Pro';
+      }
+       td{
+        /* border: 1px dashed gray; */
+   
+        
+        text-align: center;
+        border-bottom: 1px solid rgb(204, 204, 204); 
+        height: 50px;
+  
+                min-width: 195px;
+                width: auto;
+       font-size: 0.8rem;
+           font-family: 'SF Regular';
+       }
+     }
+}
+
+&_nominations{
+   color: black;
+     min-width:395px;
+     width:80vw;
+     min-height: 300px;
+     height: auto;
+     margin: 0 auto;
+     margin-top: 100px;
+    padding: 3rem 0;
+
+
+    h2{
+      font-family: 'Akony';
+      font-size: 1.5rem;
+      text-align: right;
+      margin-bottom: 100px;
+    }
+
+    &_list{
+      &_leader{
+
+        div:first-child{
+        width: 50%;
+
+        }
+        display: flex;
+  
+        align-items: center;
+        min-height: 200px;
+        height: auto;
+          flex-wrap: wrap;
+        h3{
+          font-family: 'Akony';
+          font-size: 2rem;
+          color: white;
+          text-shadow: 0px 0px 1px black;
+        }
+        &_stats{
+          width: 50%;
+          text-align: center;
+      
+          h4{
+            font-family: 'SF Pro';
+            font-size: 1.5rem;
+
+          }
+          &_achievement{
+            color: blue;
+            font-family: 'SF Pro';
+            font-size: 0.9rem;
+            
+          }
+         
+        }
+      }
+
+  
+    }
+}
+ 
+
+
+&_board{
+  min-width:500px;
+  width: 80vw;
+  background: black;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  position: relative;
+  color: white;
+  &_image{
+    animation: up 2s ease-in-out;
+    filter: drop-shadow(0px 0px 30px rgb(82, 0, 0));
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 10%;
+  }
+
+  &_date{
+    font-size: 0.7rem;
+    font-family: 'GeistVFMono';
+    color: gray;
+    width: calc(100vw / 3);
+    text-align: center;
+     align-self: start;
+  }
+  h2{
+    font-size: 2rem;
+    font-family: 'Akony';
+    animation: up 1s ease-in-out;
+        width: calc(100vw / 3);
+     
+  }
+}
+
+}
+
+.special{
+  
+    color: transparent; 
+    background: linear-gradient(120deg,blue,pink,red,purple);
+    background-clip: text;
+}
+
+.font_subtitle{
+  color: black !important;
+}
+
+.mod{
+  font-family: 'GeistVF' !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+
+}
+@keyframes up{
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+@media screen and (max-width: 788px) {
+  .page{
+    
+ &_header{
+  h6{
+    font-size: 1.5rem;
+    
+  }
+ }
+    
+    &_board{
+      flex-direction: column;
+      align-items: center;
+      h2{
+        width: max-content;
+        font-size: calc(1.2rem + 0.5vw);
+     
+      }
+
+    }
+
+    &_rewards{
+      width: 100vw;     
+    
+      & table{
+         td{
+          min-width: calc(100vw/4);
+         }
+      }
+      h2{
+        font-size: 1.5rem;
+        text-align: center;
+       
+      
+      }
+    }
+
+    &_nominations{
+      h2{
+       text-align: center;
+      }
+
+      &_list{
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &_leader{
+          
+           gap: 50px;
+          div:first-child{
+         width: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+        }
+
+         
+        flex-direction: column;
+        }
+      
+      }
+   
+    }
+  }
+}
+
+
+
+@media  screen and (max-width: 505px) {
+  .page{
+    &_board{
+      h2{
+        width: 100vw;
+      }
+    }
+  }
+}
+  

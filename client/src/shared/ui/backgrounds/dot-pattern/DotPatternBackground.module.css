@@ -1,0 +1,80 @@
+.dotPatternContainer {
+
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dotPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgb(4, 0, 255) 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-position: 0 0, 10px 10px; 
+
+}
+
+.fadeMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 20%,
+    whitesmoke 60%,
+    whitesmoke 85%,
+    whitesmoke 100%
+  );
+  z-index: 5;
+} 
+
+
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+  .dotPattern {
+    background-image: radial-gradient(circle, rgba(147, 197, 253, 0.3) 1px, transparent 1px);
+  }
+} */
+
+/* Responsive dot sizes */
+/* @media (max-width: 768px) {
+  .dotPattern {
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dotPattern {
+    background-size: 12px 12px;
+  }
+} */

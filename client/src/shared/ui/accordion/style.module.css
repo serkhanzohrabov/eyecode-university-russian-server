@@ -1,0 +1,92 @@
+.accordion {
+  border-bottom: 1px solid #ddd;
+
+
+}
+
+.accordion_icon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.accordion_question{
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ flex: 1;
+
+}
+
+
+.accordionHeader {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'SF Pro';
+  cursor: pointer;
+  outline: none;
+  color: black;
+   
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+
+}
+
+.accordionContent.open {
+  max-height: 200px; /* можно регулировать */
+  opacity: 1;
+  padding: 20px;
+  text-align: center;
+  font-family: 'SF Pro';
+  color: blue;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .accordion_question {
+     span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.6rem;
+     }
+  }
+
+  .accordion_question{
+  div:last-child{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+ 
+}

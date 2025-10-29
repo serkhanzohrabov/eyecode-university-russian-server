@@ -1,0 +1,52 @@
+.support-chat{
+    position: fixed;
+    width: 375px;
+    height: 375px;
+    left: calc(50% - 187.5px);
+    bottom: calc(50% - 187.5px);
+    z-index: 2000;
+    transition: all 0.3s ease;
+    opacity: 0.98;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    animation: chat-open 0.5s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p{
+        color: black;
+        font-family: 'SF Regular';
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+   
+}
+.support-chat-links{
+        width: 100%;
+        display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+@keyframes chat-open {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

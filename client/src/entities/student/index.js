@@ -1,0 +1,1 @@
+export { findStudentById } from './model/model';

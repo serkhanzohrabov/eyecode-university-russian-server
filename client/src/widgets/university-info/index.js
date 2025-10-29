@@ -1,0 +1,1 @@
+export {default as UniversityInfo} from './ui/university-info.jsx';

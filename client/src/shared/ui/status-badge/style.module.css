@@ -1,0 +1,47 @@
+.badge_true{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: 'GeistVF';
+        font-size: 0.6rem;
+        background: rgba(0, 128, 0, 0.05);
+        border-radius: 20px;
+        color: green;
+        padding: 8px;
+        text-align: center;
+      
+}
+
+.badge_false{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: 'GeistVF';
+        font-size: 0.6rem;
+        background: rgba(255, 0, 0, 0.05);
+        border-radius: 20px;
+        color: rgb(163, 0, 0);
+        padding: 8px;
+        text-align: center;
+      
+}
+
+.badge_lighthouse_true {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+    animation: status 2s infinite linear;
+    box-shadow: 0px 0px 10px green;
+  }
+
+.badge_lighthouse_false {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    animation: status 2s infinite linear;
+    box-shadow: 0px 0px 10px red;
+  }

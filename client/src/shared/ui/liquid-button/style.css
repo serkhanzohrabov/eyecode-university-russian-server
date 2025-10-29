@@ -1,0 +1,19 @@
+.liquid-button{
+    padding: 10px;
+    border-radius: 50px;
+    background: linear-gradient(120deg,rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)) ;
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    box-shadow: inset -2px 1px 5px rgba(255, 255, 255, 0.5);
+    transition: all .2s ease;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+}

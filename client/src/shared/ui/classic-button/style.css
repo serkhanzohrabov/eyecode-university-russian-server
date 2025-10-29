@@ -1,0 +1,15 @@
+.button{
+    width:120px;
+    height: 40px;
+    background: linear-gradient(120deg, white 0,1%, blue);
+    color: white;
+    border-radius: 25px;
+
+    transition: all .2s ease;
+
+    &:hover{
+        background: white;
+        color: black;
+        cursor: pointer;
+    }
+}

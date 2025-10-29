@@ -1,0 +1,62 @@
+.container {
+  color: #ccc;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+
+.grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.square {
+  width: 20px !important;
+  height: 20px !important;
+    border-radius: 4px;
+
+  transition: transform 0.2s ease;
+}
+
+.square:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.legendColor {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.legendText {
+  color: #aaa;
+}

@@ -1,0 +1,302 @@
+  
+  $border-color:rgb(255, 255, 255);
+  $card-bg-color:rgb(255, 255, 255);
+  $card-shadow:rgba(201, 201, 201, 0.2) 0px 0px 8px 0px  ;
+  
+  .stats_card{
+    transform-style:preserve-3d ;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    width: 100%;
+    min-height: 100vh;
+    border: 1px solid whitesmoke;
+    height: auto;
+    padding: 3%;
+    border-radius: 10px;
+    background: #f7f8fa;
+       
+    &_info{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        width: 50%;
+        height: auto;
+        
+      &_account{
+              min-width: 343px;
+              background: $card-bg-color;
+              border-radius: 15px 15px 15px 15px;
+              overflow: hidden;
+                   box-shadow: $card-shadow;
+        &_name{
+                position: relative;
+                font-family: 'SF Pro';
+                font-size:1.2rem ;
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                height: 70px;
+                padding: 1rem;
+                color: white;
+                min-width: 100%;
+                // background:linear-gradient(120deg,white 0,5%,blue); 
+             background:url('/account-bg.jpg') right no-repeat;
+             background-size: cover;
+            
+                &_main{
+                  display: flex;
+                  gap: 20px;
+                  align-items: center;
+                }
+              }
+        &_share{
+          border-left: 1px solid rgb(216, 216, 216);
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+              } 
+        &_info{
+         width: 100%;
+         height: 200px;
+         padding: 1rem;
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         gap: 1rem;
+         &_team{
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-family: 'SF Pro'; 
+         } 
+
+         &_sm{
+            display: flex;
+            flex-direction: column;
+            li{
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              color: blue;
+              font-family: 'SF Regular';
+            }
+         }
+         &_ea{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'SF Regular';
+         }
+        }  
+          
+      }
+     
+ 
+      &_id{
+       font-size: 0.8rem;
+        font-family: 'SF Regular';
+      }
+      &_details{
+        display: flex;
+        font-family: 'SF Regular';
+        
+        background: $card-bg-color;
+        border-radius: 15px;
+        flex-direction: column;
+        min-width: 343px;
+
+        box-shadow: $card-shadow;
+        padding: 1rem;
+        &_total{
+          width: 100%;
+          height: 100%;
+          display: flex;
+    
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;     
+          color: black;
+          font-size: 0.7rem;
+        }
+        & h2{
+          font-size: 1rem;
+        }
+        
+      }
+      
+
+      &_monthly{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background: $card-bg-color;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: $card-shadow;
+        width: 343px;
+         &_links{
+         
+          display: flex;
+          gap: 10px;
+
+         }
+      }
+     
+      
+
+    }
+
+    &_analyze{
+
+      display: flex;
+      width: auto;
+      min-width: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100%;
+      height: auto;
+      gap: 1rem; 
+      &_chart{
+        width: 100%;
+        height: 45%;
+        display: flex;
+        align-items: center;
+        box-shadow: $card-shadow;
+        background: $card-bg-color;
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 1rem;
+        h2{
+          align-self: start;
+          font-size: 1rem;
+          font-family: 'SF Pro';
+        }
+      }
+      
+      &_achievement{
+        padding: 20px;
+        min-height: 200px;
+         height: auto;
+        background: $card-bg-color;
+        box-shadow: $card-shadow;
+        border-radius: 10px;
+        width: 100%;
+      
+
+        &_items{
+           width: 100%;
+           min-height: 150px;
+         
+           display: flex;
+           gap: 1rem;
+           align-items: center;
+           justify-content: center;
+           font-family: 'SF Regular';
+
+         
+        }
+        h2{
+          font-family: 'SF Pro';
+          font-size: 1rem;
+        }
+      }
+
+   
+
+      &_info{
+        height:auto;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        border-radius: 10px;
+      
+        &_schedule{
+           background: white;
+           border-radius: 10px;
+           width: 50%;
+           height: 200px;
+           display: flex;
+           flex-direction: column;
+           box-shadow: $card-shadow;
+           padding: 1rem;
+           gap: 1rem;
+           h2{
+            font-size: 1rem;
+            font-family: 'SF Pro';
+           }
+
+           &_items{
+             display: flex;
+             flex-direction: column;
+             gap: 1rem;
+          }
+        }
+        &_streak{
+          background: linear-gradient(120deg,rgb(255, 255, 255),rgb(255, 255, 255));
+          color: rgb(0, 0, 0);
+          border-radius: 10px;
+          width: 50%;
+          height: 200px;
+          box-shadow: $card-shadow;
+          padding: 1rem;
+          &_items{
+           width: 100%;
+           height: 100%;
+           display: flex;
+           gap: 1rem;
+           align-items: center;
+           justify-content: center;
+           font-family: 'SF Regular';
+          }
+          h2{
+            font-size: 1rem;
+            font-family: 'SF Pro';
+           }
+        }
+        
+      }
+      
+    }
+   
+  }
+
+  @media screen and (max-width:975px){
+     .stats_card{
+      width: 100vw;
+      min-height: 100vh;
+      height: auto;
+      overflow-y: scroll;
+      inset: 0;
+      gap: 100px;
+      flex-direction: column;
+
+    &_info{
+      width: 100%;
+      &_monthly_links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    &_analyze{
+
+      &_info{
+        flex-direction: column;
+        & div{
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+  }
+  
