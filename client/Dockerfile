@@ -1,26 +1,44 @@
-FROM node:alpine as build
+# FROM node:alpine as build
 
+
+FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY package.json package.json
-
+COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . .
 
 RUN npm run build
 
-FROM nginx:stable-alpine
-
-COPY --from=build /app/.next /usr/share/nginx/html
-COPY --from=build /app/public /usr/share/nginx/html
-
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
 EXPOSE 3000
 
+CMD ["npm", "start"]
 
-CMD ["nginx", "-g", "daemon off;"]
-# CMD ["npm", "start"]
+
+
+
+# WORKDIR /app
+
+# COPY package.json package.json
+
+# RUN npm install
+
+# COPY . .
+
+# RUN npm run build
+
+# FROM nginx:stable-alpine
+
+# COPY --from=build /app/.next /usr/share/nginx/html
+# COPY --from=build /app/public /usr/share/nginx/html
+
+
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# EXPOSE 3000
+
+
+# CMD ["nginx", "-g", "daemon off;"]
+# # CMD ["npm", "start"]
