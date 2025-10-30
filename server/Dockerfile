@@ -1,17 +1,9 @@
-# Указываем базовый образ с Node.js
 FROM node:18-alpine
-
-# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
 
-# КОПИРУЕМ package.json и package-lock.json
 COPY package*.json ./
-#  Устанавливаем только production зависимости
-RUN npm install --production
-
-# КОПИРУЕМ ВСЕ ФАЙЛЫ ПРОЕКТА В КОНТЕЙНЕР
+RUN npm ci
 COPY . .
 
-
-# ЗАПУСКАЕМ ПРИЛОЖЕНИЕ
+EXPOSE 5000
 CMD ["npm", "start"]

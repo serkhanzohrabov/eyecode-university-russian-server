@@ -1,44 +1,22 @@
-# FROM node:alpine as build
-
-
-FROM node:lts-alpine
-
+# --- Stage 1: Build ---
+FROM node:18-alpine AS builder
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm install
-
+COPY package*.json ./
+RUN npm ci
 COPY . .
-
 RUN npm run build
 
+# --- Stage 2: Run ---
+FROM node:18-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/package*.json ./
+
+RUN npm ci --omit=dev
+
 EXPOSE 3000
-
 CMD ["npm", "start"]
-
-
-
-
-# WORKDIR /app
-
-# COPY package.json package.json
-
-# RUN npm install
-
-# COPY . .
-
-# RUN npm run build
-
-# FROM nginx:stable-alpine
-
-# COPY --from=build /app/.next /usr/share/nginx/html
-# COPY --from=build /app/public /usr/share/nginx/html
-
-
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# EXPOSE 3000
-
-
-# CMD ["nginx", "-g", "daemon off;"]
-# # CMD ["npm", "start"]
