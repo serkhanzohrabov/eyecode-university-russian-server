@@ -1,34 +1,40 @@
-version: "3.9"
+version: "3.8"
 
 services:
-  client:
-    build: ./client
-    container_name: next_client
-    restart: always
-    environment:
-      - NODE_ENV=production
-    expose:
-      - "3000"
-    depends_on:
-      - server
-
   server:
     build: ./server
     container_name: api_server
     restart: always
-    environment:
-      - NODE_ENV=production
-    expose:
-      - "5000"
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+  client:
+    build: ./client
+    container_name: next_client
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - server
 
   nginx:
     image: nginx:stable-alpine
     container_name: nginx_gateway
     restart: always
     ports:
-        - "80:80"
+      - "80:80"
     volumes:
-        - ./nginx:/etc/nginx/conf.d:ro
+      - ./nginx:/etc/nginx/conf.d:ro
     depends_on:
-        - client
-        - server
+      - client
+      - server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
