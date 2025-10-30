@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 // Разрешаем CORS для фронтенда на Next.js
-app.use(cors({ origin:["http://localhost:3000", "https://eyecodeuniversity.ru",] }));
+app.use(cors({ origin:["http://localhost:3000", "https://eyecodeuniversity.ru","http://87.228.25.133/"] }));
 
 
 app.use(express.json());
